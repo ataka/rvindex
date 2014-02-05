@@ -8,14 +8,11 @@ FactoryGirl.define do
     last 'Strauss'
   end
 
-  factory :j_strauss, class: Name do
+  factory :j_strauss, parent: :strauss do
     first 'Johann'
-    last 'Strauss'
   end
 
-  factory :j_strauss2, class: Name do
-    first 'Johann'
-    last  'Strauss'
+  factory :j_strauss2, parent: :j_strauss do
     suffix 'II'
   end
 end
